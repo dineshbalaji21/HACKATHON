@@ -31,7 +31,7 @@ export default function DeptOfficers() {
     return { ...off, pending, overdue, risk, reopened, status };
   });
 
-  const handleSendMessage = (officerId) => {
+  const handleSendMessage = (_officerId) => {
     alert(`Comms link established. Message dispatched to Field Officer.`);
     setMessageOpen(null);
     setMessageText('');

@@ -3,7 +3,7 @@ import { Navigate } from 'react-router-dom';
 import { useMockData } from '../contexts/MockDataContext';
 import AccessRestricted from '../pages/auth/AccessRestricted';
 
-const ROLE_PREFIXES = {
+const _ROLE_PREFIXES = {
   citizen: ['/citizen'],
   officer: ['/officer'],
   department_head: ['/department'],

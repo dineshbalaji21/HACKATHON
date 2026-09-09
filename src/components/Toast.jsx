@@ -1,3 +1,4 @@
+/* oxlint-disable react/only-export-components */
 import React, { createContext, useContext, useState, useCallback } from 'react';
 import { CheckCircle, WarningCircle, XCircle, X } from '@phosphor-icons/react';
 import './Toast.css';

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useMockData } from '../../contexts/MockDataContext';
-import { Card } from '../../components/Card';
 import { Button } from '../../components/Button';
 import {
   CaretLeft,
@@ -12,8 +11,6 @@ import {
   WarningCircle,
   Check,
   Clock,
-  Buildings,
-  ShieldCheck,
   UserCheck,
   PaperPlaneRight,
   Sparkle,

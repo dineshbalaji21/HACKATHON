@@ -18,7 +18,7 @@ import './OtpModal.css';
  */
 export default function OtpModal({
   isOpen,
-  user,
+  user: _user,
   roleLabel = 'User',
   onSuccess,
   onCancel
@@ -42,10 +42,13 @@ export default function OtpModal({
 
   useEffect(() => {
     if (isOpen) {
-      generateNewOtp();
-      setIsSuccess(false);
-      setIsVerifying(false);
-      setTimeout(() => inputRef.current?.focus(), 100);
+      const timer = setTimeout(() => {
+        generateNewOtp();
+        setIsSuccess(false);
+        setIsVerifying(false);
+        inputRef.current?.focus();
+      }, 0);
+      return () => clearTimeout(timer);
     }
   }, [isOpen]);
 

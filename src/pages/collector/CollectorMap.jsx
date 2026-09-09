@@ -97,7 +97,7 @@ export default function CollectorMap() {
                 { top: 75, left: 30 },
                 { top: 50, left: 50 },
               ];
-              const pos = positions[idx] || { top: 20 + Math.random() * 60, left: 20 + Math.random() * 60 };
+              const pos = positions[idx] || { top: 20 + ((idx * 17) % 60), left: 20 + ((idx * 29) % 60) };
               
               const size = Math.max(40, Math.min(100, hotspot.count * 12));
               const isHighRisk = hotspot.avgRisk >= 80;

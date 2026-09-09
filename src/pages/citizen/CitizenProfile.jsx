@@ -1,7 +1,5 @@
 import React from 'react';
 import { useMockData } from '../../contexts/MockDataContext';
-import { Card } from '../../components/Card';
-import { Button } from '../../components/Button';
 import {
   User,
   MapPin,
@@ -10,13 +8,26 @@ import {
   SignOut,
   Envelope,
   House,
-  CheckCircle,
   ShieldCheck,
   QrCode,
   Sparkle,
   LockKey
 } from '@phosphor-icons/react';
 import { useNavigate } from 'react-router-dom';
+
+const InfoRow = ({ icon: Icon, label, value }) => (
+  <div className="flex items-start gap-3 py-3 border-b border-gray-100 border-opacity-10">
+    <div className="w-8 h-8 rounded-lg bg-surface flex items-center justify-center text-primary flex-shrink-0">
+      <Icon size={16} />
+    </div>
+    <div className="flex-1">
+      <p className="text-[10px] uppercase font-bold tracking-widest text-secondary m-0">{label}</p>
+      <p className="font-semibold text-sm text-white m-0 mt-0.5">
+        {value || <span className="opacity-40 font-normal">Not specified</span>}
+      </p>
+    </div>
+  </div>
+);
 
 export default function CitizenProfile() {
   const { currentUser, complaints, logout } = useMockData();
@@ -32,20 +43,6 @@ export default function CitizenProfile() {
     logout();
     navigate('/auth');
   };
-
-  const InfoRow = ({ icon: Icon, label, value }) => (
-    <div className="flex items-start gap-3 py-3 border-b border-gray-100 border-opacity-10">
-      <div className="w-8 h-8 rounded-lg bg-surface flex items-center justify-center text-primary flex-shrink-0">
-        <Icon size={16} />
-      </div>
-      <div className="flex-1">
-        <p className="text-[10px] uppercase font-bold tracking-widest text-secondary m-0">{label}</p>
-        <p className="font-semibold text-sm text-white m-0 mt-0.5">
-          {value || <span className="opacity-40 font-normal">Not specified</span>}
-        </p>
-      </div>
-    </div>
-  );
 
   return (
     <div className="flex flex-col gap-6 animate-fade-in pb-12">

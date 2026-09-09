@@ -143,8 +143,10 @@ export default function ReportComplaint() {
   // Run AI Core analysis animation when entering Step 4
   useEffect(() => {
     if (currentStep === 4) {
-      setIsAnalyzing(true);
-      setAnalysisStep(1);
+      const t0 = setTimeout(() => {
+        setIsAnalyzing(true);
+        setAnalysisStep(1);
+      }, 0);
 
       const t1 = setTimeout(() => setAnalysisStep(2), 700);
       const t2 = setTimeout(() => setAnalysisStep(3), 1400);
@@ -152,6 +154,7 @@ export default function ReportComplaint() {
       const t4 = setTimeout(() => setIsAnalyzing(false), 2700);
 
       return () => {
+        clearTimeout(t0);
         clearTimeout(t1);
         clearTimeout(t2);
         clearTimeout(t3);
