@@ -1,0 +1,28 @@
+.graph-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-4) 0;
+}
+
+.graph-node-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.graph-node {
+  width: 100%;
+  max-width: 400px;
+  padding: var(--spacing-3) var(--spacing-4);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.graph-edge {
+  font-size: 1.5rem;
+  color: var(--secondary-light);
+  margin: var(--spacing-2) 0;
+  font-weight: bold;
+}

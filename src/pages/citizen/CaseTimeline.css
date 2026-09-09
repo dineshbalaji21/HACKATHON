@@ -1,0 +1,39 @@
+.timeline-container {
+  position: relative;
+  padding-left: var(--spacing-4);
+  margin-top: var(--spacing-4);
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: var(--spacing-6);
+  padding-left: var(--spacing-6);
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -4px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 1px;
+  top: 16px;
+  bottom: -4px;
+  width: 2px;
+  z-index: 1;
+}
+
+.timeline-content {
+  position: relative;
+  top: -2px;
+}

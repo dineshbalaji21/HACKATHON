@@ -1,0 +1,72 @@
+/* GovAction AI Consistent Status Badge System */
+.civic-status-badge,
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 26px;
+  padding: 0 10px;
+  border-radius: var(--radius-full, 9999px);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  line-height: 1;
+  border: 1px solid transparent;
+}
+
+.status-badge-icon {
+  flex-shrink: 0;
+}
+
+/* ACTIVE - Mint */
+.civic-status-badge.status-active {
+  background: rgba(53, 214, 195, 0.1);
+  color: var(--primary, #35D6C3);
+  border-color: rgba(53, 214, 195, 0.3);
+}
+
+/* IN PROGRESS - Amber */
+.civic-status-badge.status-in-progress {
+  background: rgba(242, 184, 75, 0.1);
+  color: var(--secondary, #F2B84B);
+  border-color: rgba(242, 184, 75, 0.3);
+}
+
+/* OVERDUE - Critical */
+.civic-status-badge.status-overdue {
+  background: rgba(255, 107, 107, 0.1);
+  color: var(--critical, #FF6B6B);
+  border-color: rgba(255, 107, 107, 0.3);
+}
+
+/* HIGH RISK / CRITICAL - Critical */
+.civic-status-badge.status-high-risk,
+.civic-status-badge.status-critical {
+  background: rgba(255, 107, 107, 0.15);
+  color: var(--critical, #FF6B6B);
+  border-color: rgba(255, 107, 107, 0.4);
+}
+
+/* REOPENED - Amber/Orange */
+.civic-status-badge.status-reopened {
+  background: rgba(242, 184, 75, 0.12);
+  color: var(--secondary, #F2B84B);
+  border-color: rgba(242, 184, 75, 0.35);
+}
+
+/* RESOLVED / VERIFIED - Success Green */
+.civic-status-badge.status-resolved,
+.civic-status-badge.status-verified {
+  background: rgba(91, 213, 138, 0.1);
+  color: var(--success, #5BD58A);
+  border-color: rgba(91, 213, 138, 0.3);
+}
+
+/* PENDING - Ice Blue */
+.civic-status-badge.status-pending {
+  background: rgba(125, 211, 252, 0.1);
+  color: var(--ice-blue, #7DD3FC);
+  border-color: rgba(125, 211, 252, 0.25);
+}

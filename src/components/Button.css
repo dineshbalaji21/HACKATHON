@@ -1,0 +1,184 @@
+/* GovAction AI Professional Button System */
+
+.civic-btn,
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease, box-shadow 180ms ease;
+  border: 1px solid transparent;
+}
+
+.civic-btn svg,
+.btn svg {
+  flex-shrink: 0;
+  transition: transform 180ms ease;
+}
+
+/* ── Button Sizes ── */
+.civic-btn-sm,
+.btn-sm {
+  height: 34px;
+  padding: 0 12px;
+  font-size: 13px;
+  border-radius: 8px;
+}
+.civic-btn-sm svg,
+.btn-sm svg {
+  font-size: 16px;
+}
+
+.civic-btn-md,
+.btn-md {
+  height: 40px;
+  padding: 0 16px;
+  font-size: 14px;
+  border-radius: 10px;
+}
+.civic-btn-md svg,
+.btn-md svg {
+  font-size: 18px;
+}
+
+.civic-btn-lg,
+.btn-lg {
+  height: 46px;
+  padding: 0 20px;
+  font-size: 15px;
+  border-radius: 11px;
+}
+.civic-btn-lg svg,
+.btn-lg svg {
+  font-size: 20px;
+}
+
+.civic-btn-full,
+.btn-full {
+  width: 100%;
+}
+
+/* ── Primary Button ── */
+.civic-btn-primary,
+.btn-primary {
+  background-color: var(--primary, #35D6C3);
+  color: #06171D;
+  border: 1px solid rgba(53, 214, 195, 0.4);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.civic-btn-primary:hover:not(:disabled),
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--primary-hover, #40E0CD);
+  border-color: #40E0CD;
+  box-shadow: 0 2px 8px rgba(53, 214, 195, 0.25);
+}
+
+/* Icon / Arrow subtle 2-3px movement on hover without scaling */
+.civic-btn-primary:hover:not(:disabled) svg:last-child,
+.btn-primary:hover:not(:disabled) svg:last-child {
+  transform: translateX(3px);
+}
+
+/* ── Secondary / Outline Button ── */
+.civic-btn-secondary,
+.btn-secondary,
+.civic-btn-outline {
+  background-color: var(--bg-surface, #0D2B31);
+  color: var(--text-secondary, #B4D0CE);
+  border: 1px solid rgba(53, 214, 195, 0.25);
+}
+
+.civic-btn-secondary:hover:not(:disabled),
+.btn-secondary:hover:not(:disabled),
+.civic-btn-outline:hover:not(:disabled) {
+  background-color: rgba(53, 214, 195, 0.08);
+  border-color: rgba(53, 214, 195, 0.5);
+  color: var(--text-primary, #E8FAF7);
+}
+
+/* ── Danger Button ── */
+.civic-btn-danger,
+.btn-danger {
+  background-color: rgba(255, 107, 107, 0.08);
+  color: var(--critical, #FF6B6B);
+  border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
+.civic-btn-danger:hover:not(:disabled),
+.btn-danger:hover:not(:disabled) {
+  background-color: rgba(255, 107, 107, 0.18);
+  border-color: var(--critical, #FF6B6B);
+}
+
+/* ── Warning Button ── */
+.civic-btn-warning,
+.btn-warning {
+  background-color: rgba(242, 184, 75, 0.08);
+  color: var(--secondary, #F2B84B);
+  border: 1px solid rgba(242, 184, 75, 0.3);
+}
+
+.civic-btn-warning:hover:not(:disabled),
+.btn-warning:hover:not(:disabled) {
+  background-color: rgba(242, 184, 75, 0.18);
+  border-color: var(--secondary, #F2B84B);
+}
+
+/* ── Ghost / Back Button ── */
+.civic-btn-ghost,
+.btn-ghost,
+.btn-back {
+  background-color: transparent;
+  color: var(--text-secondary, #B4D0CE);
+  border: 1px solid transparent;
+}
+
+.civic-btn-ghost:hover:not(:disabled),
+.btn-ghost:hover:not(:disabled),
+.btn-back:hover:not(:disabled) {
+  background-color: rgba(53, 214, 195, 0.06);
+  border-color: rgba(53, 214, 195, 0.2);
+  color: var(--primary, #35D6C3);
+}
+
+.civic-btn-ghost:hover:not(:disabled) svg:first-child,
+.btn-back:hover:not(:disabled) svg:first-child {
+  transform: translateX(-3px);
+}
+
+/* ── Active, Disabled & Loading States ── */
+.civic-btn:active:not(:disabled),
+.btn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.civic-btn:disabled,
+.btn:disabled,
+.civic-btn-loading {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.civic-btn-spinner {
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ── Focus Outline ── */
+.civic-btn:focus-visible,
+.btn:focus-visible {
+  box-shadow: 0 0 0 2px var(--bg-main, #06171D), 0 0 0 4px var(--primary, #35D6C3);
+}
