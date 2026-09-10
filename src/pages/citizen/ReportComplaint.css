@@ -20,13 +20,13 @@
   font-size: 1.75rem;
   font-weight: 800;
   letter-spacing: -0.02em;
-  color: var(--text-primary, #E8FFFB);
+  color: var(--text-primary, #ffffff);
   margin: 0;
 }
 
 .report-header-subtitle {
   font-size: 0.9rem;
-  color: var(--text-secondary, #91B8B4);
+  color: var(--text-secondary, #ffffff);
   margin: 0;
   line-height: 1.5;
 }
@@ -36,7 +36,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(16, 47, 49, 0.7);
+  background: rgba(0, 237, 254, 0.7);
   border: 1px solid rgba(145, 184, 180, 0.18);
   border-radius: var(--radius-md, 10px);
   padding: 0.85rem 1.25rem;
@@ -59,7 +59,7 @@
 }
 
 .report-step-node:hover {
-  background: rgba(57, 230, 208, 0.08);
+  background: rgba(255, 0, 0, 0.08);
 }
 
 .report-step-number {
@@ -72,7 +72,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(145, 184, 180, 0.15);
+  background: rgba(255, 0, 0, 0.15);
   color: var(--text-secondary, #91B8B4);
   border: 1px solid rgba(145, 184, 180, 0.25);
   transition: all 0.2s ease;
@@ -292,8 +292,17 @@
 }
 
 @keyframes pulseRecording {
-  0%, 100% { transform: scale(1); box-shadow: 0 0 15px rgba(255, 107, 107, 0.3); }
-  50% { transform: scale(1.06); box-shadow: 0 0 28px rgba(255, 107, 107, 0.6); }
+
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(255, 107, 107, 0.3);
+  }
+
+  50% {
+    transform: scale(1.06);
+    box-shadow: 0 0 28px rgba(255, 107, 107, 0.6);
+  }
 }
 
 /* Simulated Animated Waveform */
@@ -312,18 +321,56 @@
   animation: waveMotion 0.8s infinite ease-in-out alternate;
 }
 
-.voice-wave-bar:nth-child(1) { height: 10px; animation-delay: 0.1s; }
-.voice-wave-bar:nth-child(2) { height: 22px; animation-delay: 0.3s; }
-.voice-wave-bar:nth-child(3) { height: 16px; animation-delay: 0.2s; }
-.voice-wave-bar:nth-child(4) { height: 28px; animation-delay: 0.4s; }
-.voice-wave-bar:nth-child(5) { height: 14px; animation-delay: 0.15s; }
-.voice-wave-bar:nth-child(6) { height: 24px; animation-delay: 0.35s; }
-.voice-wave-bar:nth-child(7) { height: 12px; animation-delay: 0.25s; }
-.voice-wave-bar:nth-child(8) { height: 20px; animation-delay: 0.45s; }
+.voice-wave-bar:nth-child(1) {
+  height: 10px;
+  animation-delay: 0.1s;
+}
+
+.voice-wave-bar:nth-child(2) {
+  height: 22px;
+  animation-delay: 0.3s;
+}
+
+.voice-wave-bar:nth-child(3) {
+  height: 16px;
+  animation-delay: 0.2s;
+}
+
+.voice-wave-bar:nth-child(4) {
+  height: 28px;
+  animation-delay: 0.4s;
+}
+
+.voice-wave-bar:nth-child(5) {
+  height: 14px;
+  animation-delay: 0.15s;
+}
+
+.voice-wave-bar:nth-child(6) {
+  height: 24px;
+  animation-delay: 0.35s;
+}
+
+.voice-wave-bar:nth-child(7) {
+  height: 12px;
+  animation-delay: 0.25s;
+}
+
+.voice-wave-bar:nth-child(8) {
+  height: 20px;
+  animation-delay: 0.45s;
+}
 
 @keyframes waveMotion {
-  from { transform: scaleY(0.4); opacity: 0.5; }
-  to { transform: scaleY(1.2); opacity: 1; }
+  from {
+    transform: scaleY(0.4);
+    opacity: 0.5;
+  }
+
+  to {
+    transform: scaleY(1.2);
+    opacity: 1;
+  }
 }
 
 .voice-transcript-box {
@@ -435,7 +482,7 @@
 .mock-map-grid-bg {
   position: absolute;
   inset: 0;
-  background-image: 
+  background-image:
     linear-gradient(rgba(57, 230, 208, 0.07) 1px, transparent 1px),
     linear-gradient(90deg, rgba(57, 230, 208, 0.07) 1px, transparent 1px);
   background-size: 24px 24px;
@@ -465,8 +512,13 @@
 }
 
 @keyframes rotateReticle {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .reticle-pin {
@@ -517,8 +569,13 @@
 }
 
 @keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .ai-scan-step-list {
@@ -700,12 +757,15 @@
   .report-category-grid {
     grid-template-columns: 1fr 1fr;
   }
+
   .report-location-grid {
     grid-template-columns: 1fr;
   }
+
   .ai-metrics-grid {
     grid-template-columns: 1fr 1fr;
   }
+
   .ai-split-tickets-grid {
     grid-template-columns: 1fr;
   }

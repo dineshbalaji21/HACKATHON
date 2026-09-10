@@ -154,7 +154,7 @@ export default function PortalSelection() {
     <AuthBackground>
       <div className="portal-selection-wrapper">
         <div className="portal-selection-hero">
-          <h1 className="portal-selection-title">Welcome to GovAction AI</h1>
+          <h1 className="portal-selection-title">Welcome to SEVAI</h1>
           <p className="portal-selection-sub">Secure Civic Governance Access</p>
           <p className="portal-selection-hint">Select your role to continue to your portal</p>
         </div>

@@ -86,7 +86,7 @@ export default function CitizenHome() {
           </div>
           <h2 className="citizen-hero-title">What would you like to resolve today?</h2>
           <p className="citizen-hero-desc">
-            Report a civic issue and let GovAction AI identify the right department and track the action until resolution.
+            Report a civic issue and let SEVAI identify the right department and track the action until resolution.
           </p>
 
           <div className="citizen-hero-actions">
@@ -289,9 +289,9 @@ export default function CitizenHome() {
           {myCases.length === 0 ? (
             <div className="citizen-empty-state-card">
               <svg className="citizen-empty-svg" viewBox="0 0 160 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="20" y="25" width="120" height="80" rx="8" fill="#102F31" stroke="#39E6D0" strokeWidth="1.5" strokeDasharray="4 4" opacity="0.4" />
-                <circle cx="80" cy="55" r="18" fill="rgba(57, 230, 208, 0.1)" stroke="#39E6D0" strokeWidth="1.5" />
-                <path d="M80 47 V63 M72 55 H88" stroke="#39E6D0" strokeWidth="2" strokeLinecap="round" />
+                <rect x="20" y="25" width="120" height="80" rx="8" fill="#102F31" stroke="#006428ff" strokeWidth="1.5" strokeDasharray="4 4" opacity="0.4" />
+                <circle cx="80" cy="55" r="18" fill="rgba(57, 230, 208, 0.1)" stroke="#85ff0cff" strokeWidth="1.5" />
+                <path d="M80 47 V63 M72 55 H88" stroke="#489b05ff" strokeWidth="2" strokeLinecap="round" />
                 <path d="M45 85 H115" stroke="#91B8B4" strokeWidth="1.5" strokeLinecap="round" opacity="0.5" />
                 <path d="M55 93 H105" stroke="#91B8B4" strokeWidth="1.5" strokeLinecap="round" opacity="0.3" />
               </svg>
@@ -413,7 +413,7 @@ export default function CitizenHome() {
                   <div className="citizen-milestone-item done">
                     <div className="citizen-milestone-dot">●</div>
                     <p className="citizen-milestone-title">Submitted</p>
-                    <p className="citizen-milestone-desc">Registered by GovAction AI</p>
+                    <p className="citizen-milestone-desc">Registered by SEVAI</p>
                   </div>
 
                   {/* Assigned */}

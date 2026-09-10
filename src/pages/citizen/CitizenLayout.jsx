@@ -128,13 +128,9 @@ export default function CitizenLayout() {
               <ShieldCheck size={24} weight="fill" />
             </div>
             <div>
-              <h2 className="citizen-brand-name">GovAction AI</h2>
+              <h2 className="citizen-brand-name">SEVAI</h2>
               <p className="citizen-brand-tag">Citizen Portal</p>
             </div>
-          </div>
-          <div className="citizen-system-status">
-            <span className="status-pulse-dot" />
-            AI CIVIC ENGINE LIVE
           </div>
         </div>
 

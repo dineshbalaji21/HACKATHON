@@ -31,6 +31,7 @@
   font-size: 13px;
   border-radius: 8px;
 }
+
 .civic-btn-sm svg,
 .btn-sm svg {
   font-size: 16px;
@@ -43,6 +44,7 @@
   font-size: 14px;
   border-radius: 10px;
 }
+
 .civic-btn-md svg,
 .btn-md svg {
   font-size: 18px;
@@ -55,6 +57,7 @@
   font-size: 15px;
   border-radius: 11px;
 }
+
 .civic-btn-lg svg,
 .btn-lg svg {
   font-size: 20px;
@@ -68,16 +71,16 @@
 /* ── Primary Button ── */
 .civic-btn-primary,
 .btn-primary {
-  background-color: var(--primary, #35D6C3);
+  background-color: var(--primary, #00ff40);
   color: #06171D;
-  border: 1px solid rgba(53, 214, 195, 0.4);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(208, 255, 0, 0.4);
+  box-shadow: 0 1px 3px rgba(0, 255, 72, 0.2);
 }
 
 .civic-btn-primary:hover:not(:disabled),
 .btn-primary:hover:not(:disabled) {
-  background-color: var(--primary-hover, #40E0CD);
-  border-color: #40E0CD;
+  background-color: var(--primary-hover, #11ff00);
+  border-color: #2fff00;
   box-shadow: 0 2px 8px rgba(53, 214, 195, 0.25);
 }
 
@@ -91,16 +94,16 @@
 .civic-btn-secondary,
 .btn-secondary,
 .civic-btn-outline {
-  background-color: var(--bg-surface, #0D2B31);
-  color: var(--text-secondary, #B4D0CE);
-  border: 1px solid rgba(53, 214, 195, 0.25);
+  background-color: var(--bg-surface, #00ff26);
+  color: var(--text-secondary, #aaff00);
+  border: 1px solid rgba(0, 255, 17, 0.25);
 }
 
 .civic-btn-secondary:hover:not(:disabled),
 .btn-secondary:hover:not(:disabled),
 .civic-btn-outline:hover:not(:disabled) {
-  background-color: rgba(53, 214, 195, 0.08);
-  border-color: rgba(53, 214, 195, 0.5);
+  background-color: rgba(47, 48, 46, 0.08);
+  border-color: rgba(102, 103, 104, 0.5);
   color: var(--text-primary, #E8FAF7);
 }
 
@@ -173,8 +176,13 @@
 }
 
 @keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* ── Focus Outline ── */

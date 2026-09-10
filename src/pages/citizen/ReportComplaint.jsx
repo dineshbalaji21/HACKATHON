@@ -73,7 +73,7 @@ export default function ReportComplaint() {
   const [analysisStep, setAnalysisStep] = useState(0);
 
   // Auto-detect multi-issue
-  const isMultiIssue = 
+  const isMultiIssue =
     formData.description.toLowerCase().includes('garbage') &&
     formData.description.toLowerCase().includes('streetlight') ||
     formData.description.toLowerCase().includes('drainage') &&
@@ -206,8 +206,8 @@ export default function ReportComplaint() {
         category: formData.category,
         department: formData.category.includes('Lighting') ? 'Electrical Department'
           : formData.category.includes('Sanitation') ? 'Sanitation Department'
-          : formData.category.includes('Drainage') ? 'Municipal Works'
-          : 'Road Infrastructure Dept',
+            : formData.category.includes('Drainage') ? 'Municipal Works'
+              : 'Road Infrastructure Dept',
         location: `${formData.area}, ${formData.street}`,
         district: formData.district,
         priority: formData.priority,
@@ -230,7 +230,7 @@ export default function ReportComplaint() {
       <div className="report-workflow-header">
         <h2 className="report-header-title">Report a Civic Issue</h2>
         <p className="report-header-subtitle">
-          Tell us what needs attention. GovAction AI will identify the issue, responsible department and required action.
+          Tell us what needs attention. SEV AI will identify the issue, responsible department and required action.
         </p>
       </div>
 
@@ -667,7 +667,7 @@ export default function ReportComplaint() {
         <div className="report-step-card">
           <div className="report-step-title-group">
             <div>
-              <h3 className="report-card-heading">GovAction AI Diagnostic Core</h3>
+              <h3 className="report-card-heading">SEV AI Diagnostic Core</h3>
               <p className="report-card-desc">
                 Autonomous classification, department routing, urgency estimation, and multi-ticket split.
               </p>

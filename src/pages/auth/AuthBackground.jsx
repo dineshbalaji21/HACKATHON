@@ -20,7 +20,7 @@ export default function AuthBackground({ children }) {
         <div className="auth-brand">
           <ShieldCheck size={28} className="text-primary animate-ai-glow" weight="fill" />
           <div>
-            <div className="auth-brand-name">GovAction AI</div>
+            <div className="auth-brand-name">SEVAI</div>
             <div className="auth-brand-sub">Civic Intelligence &amp; Government Action Platform</div>
           </div>
         </div>

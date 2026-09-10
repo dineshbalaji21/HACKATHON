@@ -261,7 +261,7 @@ function CitizenRegister() {
           </div>
           <div>
             <h2 className="auth-card-title">Create Citizen Account</h2>
-            <p className="auth-card-subtitle">Join the GovAction AI civic platform</p>
+            <p className="auth-card-subtitle">Join the SEVAI civic platform</p>
           </div>
         </div>
 
